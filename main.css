@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  max-width: 768px; /* コンテンツの最大幅を768pxに制限 */
+  max-width: 768px; /* コンテンツの最大幅を3000pxに制限 */
   width: 100%; /* コンテンツが幅いっぱいに広がるように設定 */
   margin: 0 auto; /* コンテンツを中央に配置 */
 }
@@ -38,19 +38,27 @@ img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
+html {
+  font-family: "游ゴシック", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h1 {
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+}
+h3 {
+  border-bottom: solid 3px #cce4ff;
+  position: relative;
+}
 
-/* レスポンシブ対応 */
-@media (max-width: 600px) {
-  .img-2col-container {
-    flex-direction: column;
-    min-height: auto;
-  }
-
-  .img-2col-container > div {
-    width: 100%;
-  }
-
-  .img-2col-container img {
-    height: 250px; /* モバイル表示時は少し小さく */
-  }
+h3:after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px #5472cd;
+  bottom: -3px;
+  width: 20%;
 }
